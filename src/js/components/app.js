@@ -8,6 +8,7 @@ var Location              = Router.Location;
 var NotFound              = Router.NotFound;
 
 var Welcome = require('./welcome/index');
+var Game = require('./game/question');
 
 var APP = React.createClass({
   render: function() {
@@ -16,6 +17,7 @@ var APP = React.createClass({
          <Locations
           onNavigation={this.handleNavigation}>
            <Location path="/" handler={Welcome} />
+           <Location path="/game" handler={Game} />
            <NotFound handler={Welcome} />
          </Locations>
        </AppLayout>
